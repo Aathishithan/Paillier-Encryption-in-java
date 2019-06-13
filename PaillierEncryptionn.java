@@ -21,7 +21,7 @@ public static void publickey(){
    n=p.multiply(q);
    temp=(p.subtract(BigInteger.valueOf(1))).multiply(q.subtract(BigInteger.valueOf(1)));
      if(gcd(n,temp).compareTo(BigInteger.valueOf(1))==0){
-        //System.out.println(p+" "+q+" "+n+" "+temp);
+          continue;
        }
        else{
         	 System.out.println("You need to get different prime numbers");
@@ -35,7 +35,7 @@ public static void publickey(){
 public static void encryption(){
 	Scanner scn=new Scanner(System.in);
 	System.out.println("Enter the vote value: ");
-    m=scn.nextBigInteger();
+        m=scn.nextBigInteger();
 	Random rand = new Random(); 
 	value1=compute(g,m);
 	r=new BigInteger(5,rand);
